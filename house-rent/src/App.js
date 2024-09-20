@@ -1,10 +1,9 @@
-
 import "./App.css";
-
-import {ToastContainer} from "react-toastify";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Explore from "./pages/Explore";
-import Offer from "./pages/Offer";
+import Offers from "./pages/Offers";
 import Category from "./pages/Category";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
@@ -16,13 +15,31 @@ import Listing from "./pages/Listing";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 
+
 function App() {
   return (
-    <div className="">
-      <Navbar/>
-      
+    <div >
+      <Router>
+        <Routes>
+        <Route path="/" element={<Explore/>}/>
+        <Route path="/offers" element={<Offers/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/category" element={<Category/>}/>
+        <Route path="/signIn" element={<SignIn/>}/>
+        <Route path="/signUp" element={<SignUp/>}/>
+        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
+        
+        
+        
+        
+        
+    
 
-      <ToastContainer/>
+        </Routes>
+
+        <Navbar />
+      </Router>
+      <ToastContainer />
     </div>
   );
 }
