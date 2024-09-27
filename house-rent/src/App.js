@@ -14,6 +14,7 @@ import EditListing from "./pages/EditListing";
 import Listing from "./pages/Listing";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import PrivateRoute from "./components/PrivateRoute";
 
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
         <Routes>
         <Route path="/" element={<Explore/>}/>
         <Route path="/offers" element={<Offers/>}/>
+        <Route path="/profile" element={<PrivateRoute/>}>
         <Route path="/profile" element={<Profile/>}/>
+        </Route>
         <Route path="/category" element={<Category/>}/>
         <Route path="/signIn" element={<SignIn/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
