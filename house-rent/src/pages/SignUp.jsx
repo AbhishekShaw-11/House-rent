@@ -35,6 +35,7 @@ const SignUp = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const auth = getAuth();
 
@@ -56,7 +57,7 @@ const SignUp = () => {
 
       navigate('/')
     } catch (error) {
-      toast.error("Bad User Credentials");
+      toast.error("Something went wrong with registration");
     }
   };
   return (
